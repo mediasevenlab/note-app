@@ -7,6 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+console.log("MONGO_URI:", process.env.MONGO_URI); // ← ВРЕМЕННЫЙ ЛОГ ДЛЯ ПРОВЕРКИ
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
